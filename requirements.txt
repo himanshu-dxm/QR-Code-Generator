@@ -159,7 +159,6 @@ odo==0.5.0
 olefile==0.46
 openpyxl==3.0.7
 packaging==20.1
-pandas-profiling==3.1.0
 pandocfilters==1.4.2
 paramiko==2.7.1
 parso==0.5.2
