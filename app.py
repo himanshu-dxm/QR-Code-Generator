@@ -5,6 +5,16 @@ import qrCodeGenerator
 app = Flask(__name__)
 
 
+@app.route('/',methods=["POST"])
+def gen():
+    query = dict(request.form)['query']
+    # query = "https://qr-code-genrator.herokuapp.com/generate"
+    img = qrCodeGenerator.generate(query)
+    res = "Image Created"
+    json_file = {'query': res}
+    return jsonify(json_file)
+
+
 @app.route('/generate', methods=["POST"])
 def generate_qr():
     query = dict(request.form)['query']
